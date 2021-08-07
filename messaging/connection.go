@@ -1,0 +1,37 @@
+package messaging
+
+import (
+	"time"
+
+	"github.com/golang/glog"
+	nats "github.com/nats-io/nats.go"
+)
+
+const (
+	Connection_Max_Retries        int8 = 10
+	Connection_Max_Retry_Duration      = time.Second * 5
+)
+
+// GetConnection is to get the connection of Nats
+func GetConnection(url string) (*Messaging, error) {
+	var retries int8 = 0
+	var nc *nats.Conn
+try:
+	retries++
+
+	//ops.Timeout =
+	nc, err := nats.Connect(url, nats.Timeout(20*time.Second))
+
+	if err != nil {
+		if retries < Connection_Max_Retries {
+			time.Sleep(Connection_Max_Retry_Duration)
+			glog.Info("Trying to connect ---", retries)
+			glog.Info(err.Error())
+			goto try
+		}
+		return nil, err
+	}
+	//defer connection.Close()
+	return &Messaging{Client: nc}, nil
+	//return nc, nil
+}

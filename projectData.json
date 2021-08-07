@@ -1,0 +1,495 @@
+{
+    "project": "COVID PNEUMONIA CT - PROJECT",
+    "groups": [
+        {
+            "name": "patient_identification_details",
+            "header": "Patient Identification Information",
+            "fields": [
+                {
+                    "name": "pname",
+                    "label": "Patient Name",
+                    "type": "string",
+                    "control": "textField",
+                    "defaults": [
+                        ""
+                    ],
+                    "required": true,
+                    "regEx": "[a-zA-Z0-9_\\-=@,\\.; ]+$]"
+                },
+                {
+                    "name": "page",
+                    "label": "Patient Age",
+                    "type": "string",
+                    "control": "textField",
+                    "defaults": [
+                        "40",
+                        "female",
+                        "do not disclose"
+                    ],
+                    "required": true,
+                    "regEx": "[0-9]"
+                },
+                {
+                    "name": "pgender",
+                    "label": "Gender",
+                    "type": "string",
+                    "control": "dropDown",
+                    "defaults": [
+                        "male",
+                        "female",
+                        "do not disclose"
+                    ],
+                    "required": true,
+                    "regEx": "[0-9]"
+                },
+                {
+                    "name": "pipopnumber",
+                    "label": "IP/OP Number",
+                    "type": "string",
+                    "control": "textField",
+                    "defaults": [
+                        "00000"
+                    ],
+                    "required": true,
+                    "regEx": "[0-9a-zA-Z]"
+                },
+                {
+                    "name": "pward",
+                    "label": "Ward",
+                    "type": "string",
+                    "control": "textField",
+                    "defaults": [
+                        "1"
+                    ],
+                    "required": true,
+                    "regEx": "[0-9a-zA-Z]"
+                },
+                {
+                    "name": "punit",
+                    "label": "Unit",
+                    "type": "string",
+                    "control": "textField",
+                    "defaults": [
+                        "1"
+                    ],
+                    "required": true,
+                    "regEx": "[0-9a-zA-Z]"
+                },
+                {
+                    "name": "phone",
+                    "label": "Phone",
+                    "type": "string",
+                    "control": "textField",
+                    "defaults": [
+                        "9849"
+                    ],
+                    "required": true,
+                    "regEx": "[0-9]"
+                }
+            ]
+        },
+        {
+            "name": "patient_covid_details",
+            "header": "Patient Covid Information",
+            "fields": [
+                {
+                    "name": "prtpcr",
+                    "label": "RT PCR Result",
+                    "type": "string",
+                    "control": "checkBox",
+                    "defaults": [
+                        "false"
+                    ],
+                    "required": true,
+                    "regEx": "[0-9]"
+                },
+                {
+                    "name": "prat",
+                    "label": "RAT Result",
+                    "type": "string",
+                    "control": "checkBox",
+                    "defaults": [
+                        "false"
+                    ],
+                    "required": true,
+                    "regEx": "[0-9]"
+                },
+                {
+                    "name": "ptestdate",
+                    "label": "Date Of Testing",
+                    "type": "string",
+                    "control": "datePicker",
+                    "defaults": [
+                        "12-12-2020"
+                    ],
+                    "required": true,
+                    "regEx": "[0-9]"
+                },
+                {
+                    "name": "pvaccinated",
+                    "label": "Is Patient Vaccinated",
+                    "type": "string",
+                    "control": "checkBox",
+                    "defaults": [
+                        "true"
+                    ],
+                    "required": true,
+                    "regEx": "[0-9]"
+                },
+                {
+                    "name": "pvaccinadate1",
+                    "label": "Date of 1st dose",
+                    "type": "string",
+                    "control": "datePicker",
+                    "defaults": [
+                        "12-12-2020"
+                    ],
+                    "required": true,
+                    "regEx": "[0-9]"
+                },
+                {
+                    "name": "pvaccinadate2",
+                    "label": "Date of 2nd dose",
+                    "type": "string",
+                    "control": "datePicker",
+                    "defaults": [
+                        "12-12-2020"
+                    ],
+                    "required": true,
+                    "regEx": "[0-9]"
+                },
+                {
+                    "name": "ppreviousscan",
+                    "label": "Details of Previous Scan",
+                    "type": "string",
+                    "control": "textField",
+                    "defaults": [
+                        "nodetails"
+                    ],
+                    "required": true,
+                    "regEx": "[a-zA-Z0-9_\\-=@,\\.; ]+$"
+                },
+                {
+                    "name": "ppostcovidstatus",
+                    "label": "Post Covid Status",
+                    "type": "string",
+                    "control": "checkBox",
+                    "defaults": [
+                        "true"
+                    ],
+                    "required": true,
+                    "regEx": "[0-9]"
+                },
+                {
+                    "name": "ppostcovidstatusdays",
+                    "label": "Post Covid Status days",
+                    "type": "string",
+                    "control": "textField",
+                    "defaults": [
+                        "0"
+                    ],
+                    "required": true,
+                    "regEx": "[0-9]"
+                },
+                {
+                    "name": "ppostcovidstatusmonths",
+                    "label": "Post Covid Status months",
+                    "type": "string",
+                    "control": "textField",
+                    "defaults": [
+                        "0"
+                    ],
+                    "required": true,
+                    "regEx": "[0-9]"
+                }
+            ]
+        },
+        {
+            "name": "patient_covid_presentation",
+            "header": "Presentation",
+            "fields": [
+                {
+                    "name": "pzsymptomsatic",
+                    "label": "Asymptomsatic",
+                    "type": "string",
+                    "control": "checkBox",
+                    "defaults": [
+                        "false"
+                    ],
+                    "required": true,
+                    "regEx": "[0-9]"
+                },
+                {
+                    "name": "pincidentaldetection",
+                    "label": "Incidental Detection",
+                    "type": "string",
+                    "control": "checkBox",
+                    "defaults": [
+                        "false"
+                    ],
+                    "required": true,
+                    "regEx": "[0-9]"
+                },
+                {
+                    "name": "pfever",
+                    "label": "Fever",
+                    "type": "string",
+                    "control": "checkBox",
+                    "defaults": [
+                        "true"
+                    ],
+                    "required": true,
+                    "regEx": "[0-9]"
+                },
+                {
+                    "name": "pcough",
+                    "label": "Cough",
+                    "type": "string",
+                    "control": "checkBox",
+                    "defaults": [
+                        "true"
+                    ],
+                    "required": true,
+                    "regEx": "[0-9]"
+                },
+                {
+                    "name": "phemoptysis",
+                    "label": "Hemoptysis",
+                    "type": "string",
+                    "control": "checkBox",
+                    "defaults": [
+                        "false"
+                    ],
+                    "required": true,
+                    "regEx": "[0-9]"
+                },
+                {
+                    "name": "pcyanosis",
+                    "label": "Cyanosis",
+                    "type": "string",
+                    "control": "checkBox",
+                    "defaults": [
+                        "false"
+                    ],
+                    "required": true,
+                    "regEx": "[0-9]"
+                },
+                {
+                    "name": "pdyspnea",
+                    "label": "Dyspnea",
+                    "type": "string",
+                    "control": "checkBox",
+                    "defaults": [
+                        "false"
+                    ],
+                    "required": true,
+                    "regEx": "[0-9]"
+                },
+                {
+                    "name": "pchestpain",
+                    "label": "Chest Pain",
+                    "type": "string",
+                    "control": "checkBox",
+                    "defaults": [
+                        "false"
+                    ],
+                    "required": true,
+                    "regEx": "[0-9]"
+                },
+                {
+                    "name": "pheadache",
+                    "label": "Headache",
+                    "type": "string",
+                    "control": "checkBox",
+                    "defaults": [
+                        "false"
+                    ],
+                    "required": true,
+                    "regEx": "[0-9]"
+                },
+                {
+                    "name": "plossoftastesmell",
+                    "label": "Loss of taste smell",
+                    "type": "string",
+                    "control": "checkBox",
+                    "defaults": [
+                        "true"
+                    ],
+                    "required": true,
+                    "regEx": "[0-9]"
+                },
+                {
+                    "name": "pmyalgia",
+                    "label": "Myalgia",
+                    "type": "string",
+                    "control": "checkBox",
+                    "defaults": [
+                        "false"
+                    ],
+                    "required": true,
+                    "regEx": "[0-9]"
+                },
+                {
+                    "name": "parthralgia",
+                    "label": "Arthralgia",
+                    "type": "string",
+                    "control": "checkBox",
+                    "defaults": [
+                        "false"
+                    ],
+                    "required": true,
+                    "regEx": "[0-9]"
+                },
+                {
+                    "name": "pgisymptoms",
+                    "label": "GI symptoms",
+                    "type": "string",
+                    "control": "checkBox",
+                    "defaults": [
+                        "false"
+                    ],
+                    "required": true,
+                    "regEx": "[0-9]"
+                },
+                {
+                    "name": "pduration",
+                    "label": "Duration",
+                    "type": "string",
+                    "control": "textField",
+                    "defaults": [
+                        "0"
+                    ],
+                    "required": true,
+                    "regEx": "[0-9]"
+                }
+            ]
+        },
+        {
+            "name": "patient_covid_co_morbalities",
+            "header": "Co Morbalities",
+            "fields": [
+                {
+                    "name": "pdiabeticmellitus",
+                    "label": "Diabetes mellitus",
+                    "type": "string",
+                    "control": "checkBox",
+                    "defaults": [
+                        "false"
+                    ],
+                    "required": true,
+                    "regEx": "[0-9]"
+                },
+                {
+                    "name": "pdiabeticmellituscontrolled",
+                    "label": "Diabetic Controlled?",
+                    "type": "string",
+                    "control": "checkBox",
+                    "defaults": [
+                        "false"
+                    ],
+                    "required": true,
+                    "regEx": "[0-9]"
+                },
+                {
+                    "name": "phypertension",
+                    "label": "Hypertension",
+                    "type": "string",
+                    "control": "checkBox",
+                    "defaults": [
+                        "false"
+                    ],
+                    "required": true,
+                    "regEx": "[0-9]"
+                },
+                {
+                    "name": "phypertensioncontrolled",
+                    "label": "Hypertension Controlled",
+                    "type": "string",
+                    "control": "checkBox",
+                    "defaults": [
+                        "true"
+                    ],
+                    "required": true,
+                    "regEx": "[0-9]"
+                },
+                {
+                    "name": "pmalignancy",
+                    "label": "Malignancy",
+                    "type": "string",
+                    "control": "checkBox",
+                    "defaults": [
+                        "false"
+                    ],
+                    "required": true,
+                    "regEx": "[0-9]"
+                },
+                {
+                    "name": "phiv",
+                    "label": "HIV",
+                    "type": "string",
+                    "control": "checkBox",
+                    "defaults": [
+                        "false"
+                    ],
+                    "required": true,
+                    "regEx": "[0-9]"
+                },
+                {
+                    "name": "pptb",
+                    "label": "PTB",
+                    "type": "string",
+                    "control": "checkBox",
+                    "defaults": [
+                        "false"
+                    ],
+                    "required": true,
+                    "regEx": "[0-9]"
+                },
+                {
+                    "name": "pcopd",
+                    "label": "Copd (asthmatic)",
+                    "type": "string",
+                    "control": "checkBox",
+                    "defaults": [
+                        "false"
+                    ],
+                    "required": true,
+                    "regEx": "[0-9]"
+                },
+                {
+                    "name": "pcronicsmoker",
+                    "label": "Chronic smoker",
+                    "type": "string",
+                    "control": "checkBox",
+                    "defaults": [
+                        "false"
+                    ],
+                    "required": true,
+                    "regEx": "[0-9]"
+                },
+                {
+                    "name": "pmmmunesuppressed",
+                    "label": "Immune suppressed",
+                    "type": "string",
+                    "control": "checkBox",
+                    "defaults": [
+                        "true"
+                    ],
+                    "required": true,
+                    "regEx": "[0-9]"
+                },
+                {
+                    "name": "pclinicalillness",
+                    "label": "Other chronic illness",
+                    "type": "string",
+                    "control": "textField",
+                    "defaults": [
+                        "nothing"
+                    ],
+                    "required": true,
+                    "regEx": "[a-zA-Z0-9_\\-=@,\\.; ]+$"
+                }
+            ]
+        }
+    ]
+}

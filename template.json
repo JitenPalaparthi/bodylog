@@ -1,0 +1,22 @@
+{
+    "project":"Some project",
+    "groups":[
+        {
+            "id":"some id",
+            "name":"name of the group",
+            "header":"group header",
+            "fields":[
+                {
+                    "id":"some id",
+                    "name":"a unique name",
+                    "lable":"some lable to display",
+                    "type":"string|number|decimal|bool",
+                    "control":"textfiled | checkbox | radio | dropdown",
+                    "defaults":["male","female","do not disclose"],
+                    "required":"true",
+                    "regEx":"[0-9]"
+                }
+            ]
+        }
+    ]
+}

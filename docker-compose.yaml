@@ -1,0 +1,37 @@
+version: "3.7"
+
+services:
+  mb:
+    container_name: nats_messaging
+    image: nats
+    ports:
+      - "4222:4222"
+      - "6222:6222"
+      - "8222:8222"
+    network_mode: bridge
+
+
+  server:
+    container_name: medicalResearch_service
+    restart: always
+    image: jpalaparthi/medicalresearch:latest
+    network_mode: bridge
+    ports:
+     - "50061:50061"
+    links:  
+       - mb
+    environment:
+      - DB_CONNECTION=mongodb://medicalResearch:%3C%3D3D%40Uas8%23Wht%40%23p@142.93.223.203:27017
+      - DB_NAME=medicalResearch
+      - MB_CONNECTION=nats://nats_messaging:4222
+  
+  web:
+    container_name: medicalresearchapp
+    restart: always
+    image: jpalaparthi/medicalresearchapp:latest
+    network_mode: bridge
+    ports:
+      - "1200:80"
+    links:
+      - server
+   
